@@ -31,23 +31,10 @@ body {
             }
         }
     }
-    &.emmet{
-        background: linear-gradient(45deg, black, #7acb16);
-        section {
-            h2.subtitle {
-                color: #7acb16;
-                border-bottom: 2px dotted #7acb16;
-                padding-bottom: 0.4rem;
-                small{
-                    color: #fff;
-                    font-size: 0.9rem;
-                    font-weight: 400;
-                    
-                }
 
-
-            }
-        }
+    &.css{
+        background: linear-gradient(45deg, black, #663399);
+        background-attachment: fixed;
     }
     &.html{
         background: linear-gradient(45deg, black, #e44d26);
