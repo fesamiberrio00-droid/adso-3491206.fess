@@ -31,10 +31,33 @@ body {
             }
         }
     }
-
     &.css{
         background: linear-gradient(45deg, black, #663399);
         background-attachment: fixed;
+        main{
+            header.mainmenu{
+                img{
+                    height:200px;
+                    width:200px;
+                }
+            }
+            menu.mainmenu{
+                margin-top:2rem;
+                a:link, a:visited{
+                    span{
+                        background-color: #663399;
+                        height: 50px;
+                        width: 50px;
+                    }
+                    aside{
+                        h4{
+                            font-size:1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
     }
     &.html{
         background: linear-gradient(45deg, black, #e44d26);
