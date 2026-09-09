@@ -3,14 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>05-advanced-selectors</title>
+    <title>08-relative-units</title>
     <link rel="stylesheet" href="../src/css/styles.css">
-    <style>
-        ul.fruits > li[class] {
-            background-color: rgba(243, 243, 35, 0.6);
-            color: #0009;
-        }
-    </style>
 </head>
 <body class="css">
     <nav class="back">
@@ -20,23 +14,29 @@
     </nav>
     <main>
         <header class="mainmenu internal">
-            <h1>05-advanced-selectors</h1>
+            <h1>08-relative-units</h1>
             <img src="../src/imgs/logo-css.png" alt="CSS">
+            <h3>Specify a length relative to another length property</h3>
             <ul>
-                <li>Adjacent/Sibling (+)</li>
-                <li>Attribute [class]</li>
-                <li>Children (>)</li>
+                <li>pixel (px)</li>
+                <li>m (em)</li>
+                <li>x (ex)</li>
+                <li>root m (rem)</li>
+                <li>viewport units width (vw)</li>
+                <li>viewport units horizontal (vh)</li>
+                <li>large viewport (lvh|lvw)</li>
+                <li>small viewport (svh|svw)</li>
+                <li>dynamic viewport (dvh|dvw)</li>
             </ul>
         </header>
         <section>
-            <h2 class="subtitle">Ejemplo:</h2>
-            <ul class="fruits">
-                <li>🟠 Orange</li>
-                <li>🍎 Apple</li>
-                <li class="highlight">🍌 Banana</li>
-                <li>🍇 Grapes</li>
-                <li>🍉 Watermelon</li>
-            </ul>
+            <h2 class="subtitle">Examples:</h2>
+                <ul>
+                    <li>px: 15px</li>
+                    <li>em: 1.5em</li>
+                    <li>ex: 2ex</li>
+                    <li>rem: 1.5rem</li>
+                </ul>
         </section>
     </main>
 </body>

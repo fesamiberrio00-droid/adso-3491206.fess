@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>05-advanced-selectors</title>
+    <title>07-inheritance</title>
     <link rel="stylesheet" href="../src/css/styles.css">
     <style>
-        ul.fruits > li[class] {
-            background-color: rgba(243, 243, 35, 0.6);
-            color: #0009;
+        section{
+            color:salmon;
+            li.highlight{
+                color:palegreen;
+            }
         }
     </style>
 </head>
@@ -20,23 +22,24 @@
     </nav>
     <main>
         <header class="mainmenu internal">
-            <h1>05-advanced-selectors</h1>
+            <h1>07-inheritance</h1>
             <img src="../src/imgs/logo-css.png" alt="CSS">
-            <ul>
-                <li>Adjacent/Sibling (+)</li>
-                <li>Attribute [class]</li>
-                <li>Children (>)</li>
-            </ul>
+            <h3>Property is inherited from the father to all his descendants.</h3>
         </header>
         <section>
-            <h2 class="subtitle">Ejemplo:</h2>
-            <ul class="fruits">
-                <li>🟠 Orange</li>
-                <li>🍎 Apple</li>
-                <li class="highlight">🍌 Banana</li>
-                <li>🍇 Grapes</li>
-                <li>🍉 Watermelon</li>
-            </ul>
+            <h2 class="subtitle">video games 2026:</h2>
+            <ol>    
+                <li>GTA VI</li>
+                <ol>
+                    <li class="highlight"> jason duval</li>
+                    <li class="highlight">lucia caminos</li>
+                    <li>cal hampton</li>
+                    <li>raul batista</li>
+                </ol>
+                <li>the legend of zelda: ocarina of time</li>
+                <li>the crimson desert</li>
+                <li>resident evil requiem</li>
+            </ol>
         </section>
     </main>
 </body>

@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00-template</title>
+    <title>06-specificity</title>
     <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        button {
+            border: none;
+            border-radius: 0.2rem;
+            /* background-color: #f00; !important */
+            color: #fff;
+            font-size: 1rem;
+            padding: 0.8rem;
+            display: flex;
+            margin: 2rem auto;
+        }
+        section button.btn{ /* specificity: 012 */ 
+            background-color: #ab7dd9;
+        }
+    </style>
 </head>
 <body class="css">
     <nav class="back">
@@ -14,12 +29,12 @@
     </nav>
     <main>
         <header class="mainmenu internal">
-            <h1>00-template</h1>
+            <h1>06-specificity</h1>
             <img src="../src/imgs/logo-css.png" alt="CSS">
-            <h3>Description</h3>
+            <h3>Is score/rank that determines which style declaration is ultimately applied to an element.</h3>
         </header>
         <section>
-
+            <button class="btn">this is a button</button>
         </section>
     </main>
 </body>
