@@ -6,39 +6,66 @@
     <title>20-pseudoclasses</title>
     <link rel="stylesheet" href="../src/css/styles.css">
     <style>
-        /* 1. Hover: Cuando pasas el mouse */
-        .boton {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: inline-block;
-            transition: background 0.3s;
+        /* :link, :hover, :active, :visited */
+        menu.options{
+            a:link,
+            a:visited{
+                background-color: #fff9;
+                color: #0009;
+                padding: 0.4rem 0.8rem;
+            }
+            a:hover{
+                background-color: #663399;
+                color: #fff9;
+            }
+            a:active{
+                background-color: red;
+                color: #fff9;
+            }
+            a:first-child{
+                opacity: .5;
+                pointer-events: none;
+            }
         }
-
-        .boton:hover {
-            background-color: #2980b9; /* Cambia a azul oscuro */
+        /* :focus, :blur */
+        input{
+            padding: 0.4rem;
+            margin-top: 0.4rem;
+            &:focus{
+                background-color: #663399;
+                color: #fff9;
+            }
         }
-
-        /* 2. Active: Cuando haces click */
-        .boton:active {
-            background-color: #e74c3c; /* Cambia a rojo al clickear */
+        /* :first-line, :first-letter */
+        p.paragraph{
+            &::first-line{
+                background-color: #663399;
+            }
+            &::first-letter{
+                font-size: 4rem;
+            }
         }
-
-        /* 3. Focus: Cuando seleccionas un input */
-        input:focus {
-            outline: 3px solid green;
-            background-color: #e8f8f5;
-        }
-
-        /* 4. First-child / nth-child: Seleccionar elementos específicos */
-        ul li:first-child {
-            color: red;
-            font-weight: bold;
-        }
-        
-        ul li:nth-child(2) {
-            color: blue;
+        /* ::after, : before */
+        div.heart{
+            position: relative;
+            height: 100px;
+            &::after, &::before{
+            position:absolute;
+            content: "";
+            left: 130px;
+            top: 0;
+            background-color: #663399;
+            border-radius: 25px 25px 0 0;
+            height: 80px;
+            width: 50px;
+            }
+            &::before{
+                transform: rotate(-45deg);
+            }
+            &::after{
+                left: 152px;
+                transform: rotate(45deg);
+            }
         }
     </style>
 </head>
@@ -55,18 +82,23 @@
             <h3>Is used to define a special state of an element.</h3>
         </header>
         <section>
-            <h3>Interacción con Mouse</h3>
-    <a href="#" class="boton">Pasa el mouse y haz click</a>
-
-    <h3>Interacción con Teclado (Input)</h3>
-    <input type="text" placeholder="Haz click aquí para ver el Focus">
-
-    <h3>Selección por posición</h3>
-    <ul>
-        <li>Este es el primer hijo (Rojo)</li>
-        <li>Este es el segundo hijo (Azul)</li>
-        <li>Este es el tercero (Normal)</li>
-    </ul>
+            <h2 class="subtitle">:link|:hover|:active|:visited</h2>
+            <h4>:first-child|:last-child</h4>
+            <menu class="options">
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+            </menu>
+            <h2 class="subtitle">:focus</h2>
+            <input type="text" placeholder="Enter your First Name">
+            <br>
+            <input type="text" placeholder="Enter your Last Name">
+            <h2 class="subtitle">:first-letter|:first-line</h2>
+            <p class="paragraph">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam est fugit omnis.
+            </p>
+            <h2 class="subtitle">:before|:after</h2>
+            <div class="heart"></div>
         </section>
     </main>
 </body>
