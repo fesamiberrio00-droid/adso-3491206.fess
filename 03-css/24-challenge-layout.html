@@ -6,17 +6,17 @@
     <title>24-challenge-layout</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        body {
+body {
     margin: 0;
-    border: 10px solid #ffffff;
+    border: 10px solid #fff;
     background-color: #17a053;
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 main {
     margin: 0 auto;
     width: 70%;
 }
-header {
+header{
     margin: 0 auto;
     width: 70%;
 }
@@ -36,7 +36,7 @@ main header section {
 }
 .menu-top a {
     background-color: #0f5d2f;
-    border-bottom: 4px solid #ffffff;
+    border-bottom: 4px solid #fff;
     color: #ffffff;
     display: inline-block;
     font-family: Arial, sans-serif;
@@ -44,6 +44,7 @@ main header section {
     letter-spacing: 1px;
     padding: 1rem 1.5rem;
     text-decoration: none;
+    transition: background-color 0.3s;
 }
 .menu-top a:hover,
 .menu-top a.active {
@@ -70,8 +71,8 @@ main header section {
     width: 270px;
 }
 .product h3 {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5); 
+    color: rgba(0, 0, 0, 0.5);                    
     font-family: Arial, sans-serif;
     font-size: 1rem;
     left: 0;
@@ -84,18 +85,10 @@ main header section {
     z-index: 2;
 }
 .product:hover h3 {
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);    
+    color: rgba(0, 0, 0, 1);                     
 }
-.product01 {
-    background: url(imgs/spriteweb.png) no-repeat;
-    background-position: -500px -25px;
-}
-.product02 {
-    background: url(imgs/spriteweb.png) no-repeat;
-    background-position: -500px -25px;
-}
-.product03 {
+.product01, .product02, .product03 {
     background: url(imgs/spriteweb.png) no-repeat;
     background-position: -500px -25px;
 }
@@ -103,7 +96,7 @@ main header section {
     background-color: #0f5d2f;
     border: 4px solid #17a053;
     margin: 2rem auto;
-    padding: 1rem 0;
+    padding: 0rem auto;
     text-align: center;
     width: 90%;
 }
@@ -138,16 +131,17 @@ main header section {
     height: 170px;
     position: absolute;
     right: 1.5rem;
-    top: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 80px;
 }
 footer {
-    background-color: #ffffff;
+    background-color: #ffff;
     border-top: 4px solid #0f5d2f;
-    margin: 2rem auto 0 auto;
-    padding: 1rem 0;
+    margin-top: 2rem;
+    margin: 0 auto;
+    width: 63%;
     text-align: center;
-    width: 70%;
 }
 .footer-img {
     background: url(imgs/spriteweb.png) no-repeat;
@@ -161,7 +155,6 @@ footer {
     padding: 0;
 }
 .menu-bottom a {
-    border-bottom: 3px solid transparent;
     color: #333333;
     display: inline-block;
     font-family: Arial, sans-serif;
@@ -169,6 +162,7 @@ footer {
     letter-spacing: 1px;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
+    border-bottom: 3px solid transparent;
 }
 .menu-bottom a:hover,
 .menu-bottom a.active {
