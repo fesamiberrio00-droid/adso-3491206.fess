@@ -3,32 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge Sprite CSS</title>
+    <title>24-challenge-layout</title>
+    <link rel="stylesheet" href="css/styles.css">
     <style>
-        body{
-            margin: 0;
-            border: 10px solid #fff;
-            background-color: #17a053;
-            min-height: 100dvh;
-            main{
-                header{
-                    figure.logo{
-                        background: url(imgs/spriteweb.png) no-repeat;
-                        background-position: -25px -420px;
-                        height: 140px;
-                        margin: 2rem auto;
-                        width: 160px;
-                    }
-                }
-            }
-        }
+        body {
+    margin: 0;
+    border: 10px solid #ffffff;
+    background-color: #17a053;
+    min-height: 100vh;
+}
+main {
+    margin: 0 auto;
+    width: 70%;
+}
+header {
+    margin: 0 auto;
+    width: 70%;
+}
+main header figure.logo {
+    background: url(imgs/spriteweb.png) no-repeat;
+    background-position: -25px -420px;
+    height: 140px;
+    margin: 2rem auto;
+    width: 160px;
+}
+main header section {
+    text-align: center;
+}
+.menu-top {
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+.menu-top a {
+    background-color: #0f5d2f;
+    border-bottom: 4px solid #ffffff;
+    color: #ffffff;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+}
+.menu-top a:hover,
+.menu-top a.active {
+    background-color: #000000;
+    border-bottom-color: #ffcd00;
+}
+.gallery {
+    background-color: #0f5d2f;
+    border: 4px solid #17a053;
+    margin: 2rem auto;
+    padding: 2rem 0;
+    text-align: center;
+    width: 90%;
+}
+.product {
+    background-color: #0f5d2f;
+    border: 4px solid #ffffff;
+    display: inline-block;
+    height: 180px;
+    margin: 0 0.5rem;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 270px;
+}
+.product h3 {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    left: 0;
+    margin: 0;
+    padding: 0.4rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.product:hover h3 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}
+.product01 {
+    background: url(imgs/spriteweb.png) no-repeat;
+    background-position: -500px -25px;
+}
+.product02 {
+    background: url(imgs/spriteweb.png) no-repeat;
+    background-position: -500px -25px;
+}
+.product03 {
+    background: url(imgs/spriteweb.png) no-repeat;
+    background-position: -500px -25px;
+}
+.info {
+    background-color: #0f5d2f;
+    border: 4px solid #17a053;
+    margin: 2rem auto;
+    padding: 1rem 0;
+    text-align: center;
+    width: 90%;
+}
+.info-block {
+    background-color: #ffffff;
+    border: 4px solid #0f5d2f;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    padding: 1.5rem;
+    position: relative;
+}
+.info-block .icon {
+    background: url(imgs/spriteweb.png) no-repeat;
+    background-position: -300px -495px;
+    float: left;
+    height: 100px;
+    margin-right: 1.5rem;
+    width: 100px;
+}
+.info-block p {
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 130px 0 0;
+    text-align: justify;
+}
+.info-block .can {
+    background: url(imgs/spriteweb.png) no-repeat;
+    background-position: -100px -220px;
+    height: 170px;
+    position: absolute;
+    right: 1.5rem;
+    top: 20px;
+    width: 80px;
+}
+footer {
+    background-color: #ffffff;
+    border-top: 4px solid #0f5d2f;
+    margin: 2rem auto 0 auto;
+    padding: 1rem 0;
+    text-align: center;
+    width: 70%;
+}
+.footer-img {
+    background: url(imgs/spriteweb.png) no-repeat;
+    background-position: -500px -440px;
+    height: 160px;
+    margin: 1rem auto;
+    width: 260px;
+}
+.menu-bottom {
+    margin: 0;
+    padding: 0;
+}
+.menu-bottom a {
+    border-bottom: 3px solid transparent;
+    color: #333333;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+}
+.menu-bottom a:hover,
+.menu-bottom a.active {
+    border-bottom-color: #17a053;
+}
     </style>
 </head>
-<body class="css">
+<body>
     <main>
         <header>
             <figure class="logo"></figure>
+            <section>
+                <nav class="menu-top">
+                    <a href="#">INICIO</a>
+                    <a href="#">NOSOTROS</a>
+                    <a href="#">PORTAFOLIO</a>
+                    <a href="#">SERVICIOS</a>
+                    <a href="#">CONTACTO</a>
+                </nav>
+            </section>
         </header>
+        <section class="gallery">
+            <article class="product product01">
+                <h3>Sprite 01</h3>
+            </article>
+            <article class="product product02">
+                <h3>Sprite 02</h3>
+            </article>
+            <article class="product product03">
+                <h3>Sprite 03</h3>
+            </article>
+        </section>
+        <section class="info">
+            <article class="info-block">
+                <figure class="icon"></figure>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
+                <figure class="can"></figure>
+            </article>
+            <article class="info-block">
+                <figure class="icon"></figure>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
+                <figure class="can"></figure>
+            </article>
+            <article class="info-block">
+                <figure class="icon"></figure>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
+                <figure class="can"></figure>
+            </article>
+        </section>
     </main>
+    <footer>
+        <figure class="footer-img"></figure>
+        <nav class="menu-bottom">
+            <a href="#">INICIO</a>
+            <a href="#">NOSOTROS</a>
+            <a href="#">PORTAFOLIO</a>
+            <a href="#">SERVICIOS</a>
+            <a href="#">CONTACTO</a>
+        </nav>
+    </footer>
 </body>
 </html>
