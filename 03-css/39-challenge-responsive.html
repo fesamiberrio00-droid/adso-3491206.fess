@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39-challenge</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        *{
+            transition: all 0.4s ease;
+        }
+body {
+    margin: 0;
+    border: 10px solid #181717;
+    background-color: #575151;
+    min-height: 100dvh;
+    background: url(imgs/fondomahoraga.jpeg) no-repeat center center; 
+    background-size: cover;
+}
+main {
+    margin: 0 auto;
+    width: 70%;
+}
+header{
+    margin: 0 auto;
+    width: 70%;
+}
+figure.logo{
+    background: url(imgs/logo.png) no-repeat center;
+    background-size: contain;
+    height: 300px;
+    margin: 0 auto;
+    width: 900px;
+    animation: 2.5s animlogo infinite ease;
+}
+h2 {
+            display: none;
+            text-align: center;
+        }
+        p {
+            line-height: 2rem;
+            text-align: justify;
+        }
+.cuadro {
+            display: inline-block;
+            width: 23%;
+            margin: 0%;
+            vertical-align: top;
+            border: 2px solid #fff;
+            height: 320px;
+        }
+.cuadro img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+.cuadro p {
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+}
+main header section {
+    text-align: center;
+}
+.gallery {
+    border: 4px solid #000;
+    margin: 2rem auto;
+    padding: 2rem 0;
+    text-align: center;
+    width: 90%;
+}
+.product {
+    background-color: #171855;
+    border: 4px solid #ffffff;
+    display: inline-block;
+    height: 350px;
+    margin: 0 0.5rem;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 269px;
+}
+.product h3 {
+    background-color: rgb(10, 10, 10); 
+    color: rgb(248, 244, 244);                    
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    left: 0;
+    margin: 0;
+    padding: 0.4rem;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}                  
+
+.product01{
+    background: url(imgs/chosito.jpg) no-repeat;
+    background-size: cover;
+}
+.product02{
+    background: url(imgs/maki.png) no-repeat;
+    background-size: cover;
+} 
+.product03{
+    background: url(imgs/megumi.jpg) no-repeat;
+    background-size: cover;
+}
+.product04{
+    background: url(imgs/gojo.jpg) no-repeat;
+    background-size: cover;
+}
+.fila{
+    margin-top: 30px;
+    border: 2px solid #fff;
+    padding: 10px;
+    background-color: #000;
+}
+.foto{
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+}
+.foto img{
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+.texto{
+    color: #fff;
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+}
+@keyframes animlogo {
+            0%, 100% { transform: scale(0.5); }
+            50%   {transform: scale(0.9); }
+        }
+        
+        @media (min-width: 1280px) {
+            main h2:first-of-type { display: block; }
+        }
+            
+        @media (max-width: 1280px) {
+            main {
+                width: 750px;
+            }
+            main h2:nth-of-type(2) { display: block; }
+            figure.logo {
+                width: 500px;
+            }
+            .cuadro { width: 46%; }
+            .foto { width: 150px; }
+            .texto { width: 60%; }
+        }
+
+        @media (max-width: 800px) {
+            main {
+                width: 350px;
+            }
+            main h2:last-of-type { display: block; }
+            main h2:nth-of-type(2) { display: none; }
+            figure.logo {
+                height: 180px;
+                width: 280px;
+            }
+            .cuadro { width: 90%; display: block; margin: 10px auto; }
+            .foto { display: block; width: 100%; }
+            .texto { display: block; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+            <figure class="logo"></figure>
+            <h2>breackpoint: > 1280px <br> (resolution: desktop)</h2>
+            <h2>breackpoint: < 1280px > 800px <br> (resolution: tablet)</h2>
+            <h2>breackpoint: < 800px <br> (resolution: mobile) </h2>
+        <section class="gallery">
+            <article class="product product01">
+                <h3>choso</h3>
+            </article>
+            <article class="product product02">
+                <h3>maki</h3>
+            </article>
+            <article class="product product03">
+                <h3>megumi</h3>
+            </article>
+            <article class="product product04">
+                <h3>gojo</h3>
+            </article>
+        </section>
+        <div class="fila">
+            <div class="foto"><img src="imgs/sukuna.png"></div>
+            <div class="texto"><p>Ryomen Sukuna es el antagonista principal de Jujutsu Kaisen, un legendario hechicero de la Era Heian convertido en el "Rey de las Maldiciones". Su alma fue fragmentada en 20 dedos indestructibles y reencarna parcialmente al ser ingeridos por el protagonista Yuji Itadori. Destaca por su poder destructivo, su forma original de cuatro brazos y una personalidad sádica, narcisista y despiadada.</p></div>
+        </div>
+        <div class="fila">
+            <div class="foto"><img src="imgs/toji.jpg"></div>
+            <div class="texto"><p>Toji Fushiguro es un letal asesino de hechiceros en Jujutsu Kaisen y el padre de Megumi Fushiguro. Nació en el prestigioso clan Zen'in, pero fue rechazado y marginado por carecer por completo de energía maldita a causa de una Restricción Celestial. A cambio, obtuvo capacidades físicas sobrehumanas y cinco sentidos ultra desarrollados que le permitieron derrotar a los hechiceros más poderosos.</p></div>
+        </div>
+    </main>
+</body>
+</html>
